@@ -1,0 +1,35 @@
+autoload colors && colors
+autoload -Uz compinit && compinit
+
+if command -v antibody >/dev/null 2>&1
+then
+    # Fix for oh-my-zsh, see https://github.com/getantibody/antibody/issues/218
+    DISABLE_AUTO_UPDATE=true
+    ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+
+    source <(antibody init)
+    antibody bundle < ~/.zsh_plugins.txt
+else
+    echo 'Please install antibody.'
+    return
+fi
+
+
+[[ -f ~/.variables.zsh ]] && source ~/.variables.zsh
+[[ -f ~/.aliases.zsh ]] && source ~/.aliases.zsh
+
+typeset -U path
+# Prepend directories: last one will be the first.
+for dir in \
+    /opt/aseprite \
+    /opt/kotlinc/bin \
+    $JAVA_HOME/bin \
+    ~/devel/go/bin \
+    ~/.cargo/bin \
+    ~/.local/bin \
+    ~/.bin \
+; do
+    if [[ -d $dir ]]; then path[1,0]=$dir; fi
+done
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
