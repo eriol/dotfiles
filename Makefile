@@ -13,3 +13,7 @@ install-zsh:
 	ln -s `pwd`/zsh/zsh_plugins.txt ~/.zsh_plugins.txt
 	ln -s `pwd`/zsh/aliases.zsh ~/.aliases.zsh
 	ln -s `pwd`/zsh/variables.zsh ~/.variables.zsh
+
+install-mbsync:
+	rm -f ~/.mbsyncrc
+	ln -s `pwd`/mbsyncrc/mbsyncrc ~/.mbsyncrc
