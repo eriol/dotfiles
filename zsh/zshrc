@@ -14,7 +14,6 @@ else
     return
 fi
 
-
 [[ -f ~/.variables.zsh ]] && source ~/.variables.zsh
 [[ -f ~/.aliases.zsh ]] && source ~/.aliases.zsh
 
@@ -32,4 +31,5 @@ for dir in \
     if [[ -d $dir ]]; then path[1,0]=$dir; fi
 done
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

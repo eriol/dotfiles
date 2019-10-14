@@ -2,6 +2,7 @@
      __________
     < DOTFILES >
      ----------
+      \
        \        \
         \        \
          \       _\^
@@ -12,6 +13,7 @@
                     ||     ||
 ```
 
-# Local configuration #
+# Local configurations #
 
 * `~/.gitconfig.local`
+* `~/.zshrc.local`
