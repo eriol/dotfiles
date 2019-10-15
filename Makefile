@@ -16,4 +16,4 @@ install-zsh:
 
 install-mbsync:
 	rm -f ~/.mbsyncrc
-	ln -s `pwd`/mbsyncrc/mbsyncrc ~/.mbsyncrc
+	ln -s `pwd`/mbsync/mbsyncrc ~/.mbsyncrc
