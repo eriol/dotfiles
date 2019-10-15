@@ -1,0 +1,27 @@
+# On Debian apparmor profile for msmtp configuration is:
+#  owner @{HOME}/**/.msmtprc        r,
+#  owner @{HOME}/**/dot_msmtprc     r,
+#  owner @{HOME}/.config/msmtp/*    r,
+#  owner @{HOME}/.cache/msmtp/*     r,
+# so to keep this file in dotfiles repository one have to choose between
+# .msmtprc and dot_msmtprc as file name. dot_msmtprc was choosen to not have
+# the file hidden.
+# See https://bugs.debian.org/919326
+
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        ~/.msmtp.log
+
+account        eriol@mornie.org
+host           sure.mornie.org
+port           25
+from           eriol@mornie.org
+user           eriol@mornie.org
+tls on
+tls_starttls on
+auth plain
+passwordeval  "gpg -q --for-your-eyes-only --no-tty -d ~/.mail/.pass/eriol@mornie.org.gpg"
+
+account default : eriol@mornie.org

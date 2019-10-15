@@ -17,3 +17,7 @@ install-zsh:
 install-mbsync:
 	rm -f ~/.mbsyncrc
 	ln -s `pwd`/mbsync/mbsyncrc ~/.mbsyncrc
+
+install-msmtp:
+	rm -f ~/.msmtprc
+	ln -s `pwd`/msmtp/dot_msmtprc ~/.msmtprc
