@@ -4,6 +4,10 @@ install-git:
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
 	ln -s `pwd`/git/gitignore ~/.gitignore
 
+install-kde:
+	rm -f ~/.local/share/konsole/Molokai.colorscheme
+	ln -s `pwd`/kde/konsole/Molokai.colorscheme ~/.local/share/konsole/Molokai.colorscheme
+
 install-zsh:
 	if [ ! -f /usr/local/bin/antibody ]; then \
 		sudo cp ~/devel/go/bin/antibody /usr/local/bin/; \
