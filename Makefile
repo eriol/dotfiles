@@ -17,6 +17,10 @@ install-zsh:
 install-mbsync:
 	rm -f ~/.mbsyncrc
 	ln -s `pwd`/mbsync/mbsyncrc ~/.mbsyncrc
+	mkdir -p ~/.config/systemd/user/
+	rm -f ~/.config/systemd/user/mbsync.*
+	ln -s `pwd`/config/systemd/user/mbsync.service ~/.config/systemd/user/mbsync.service
+	ln -s `pwd`/config/systemd/user/mbsync.timer ~/.config/systemd/user/mbsync.timer
 
 install-msmtp:
 	rm -f ~/.msmtprc
