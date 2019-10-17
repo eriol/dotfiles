@@ -1,0 +1,12 @@
+set mbox_type = Maildir
+set folder = ~/.mail/eriol@mornie.org
+set realname ="Daniele Tricoli"
+set from = "eriol@mornie.org"
+
+mailboxes `fdfind . '/home/eriol/.mail/eriol@mornie.org' --max-depth=4 --type d -H | rg -v "tmp|new|cur" | rg '/home/eriol/.mail/eriol@mornie.org/' -r '="' | sort | sed 's|$|\"|g' | tr '\n' ' '`
+set spoolfile = +Inbox
+set record = +Sent
+set postponed = +Drafts
+set trash = +Trash
+
+set sendmail = "/usr/bin/msmtp -a eriol@mornie.org"

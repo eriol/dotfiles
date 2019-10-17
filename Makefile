@@ -29,3 +29,7 @@ install-mbsync:
 install-msmtp:
 	rm -f ~/.msmtprc
 	ln -s `pwd`/msmtp/dot_msmtprc ~/.msmtprc
+
+install-neomutt:
+	rm -f ~/.neomutt
+	ln -s `pwd`/neomutt ~/.neomutt
