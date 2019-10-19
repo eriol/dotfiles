@@ -42,3 +42,7 @@ install-fontconfig:
 install-vdirsyncer:
 	rm -rf ~/.vdirsyncer
 	ln -s `pwd`/vdirsyncer ~/.vdirsyncer
+
+install-khard:
+	rm -rf ~/.config/khard
+	ln -s `pwd`/config/khard ~/.config/khard
