@@ -1,7 +1,7 @@
 IMAPAccount eriol@mornie.org
 Host sure.mornie.org
 User eriol@mornie.org
-PassCmd "gpg -q --for-your-eyes-only --no-tty -d ~/.mail/.pass/eriol@mornie.org.gpg"
+PassCmd "keyring get email eriol@mornie.org"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
