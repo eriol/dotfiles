@@ -1,3 +1,5 @@
+application/pdf; /usr/bin/xdg-open %s ; copiousoutput
+application/postscript; /usr/bin/xdg-open %s ; copiousoutput
 audio/*; /usr/bin/xdg-open %s ; copiousoutput
 image/*; /usr/bin/xdg-open %s ; copiousoutput
 text/html; firefox %s && sleep 5; test=test -n "$DISPLAY";
