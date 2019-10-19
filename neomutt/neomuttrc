@@ -7,6 +7,9 @@ set send_charset = "utf-8"
 macro index,pager \cb "<pipe-message> w3m -I "utf-8" -T text/html | urlscan<Enter>"
 macro attach,compose \cb "<pipe-entry> w3m -I "utf-8" -T text/html | urlscan<Enter>"
 
+folder-hook . set sort=threads
+set sort_aux=last-date-received
+
 set signature = ~/.neomutt/signature
 source ~/.neomutt/accounts/default
 source ~/.neomutt/sidebar
