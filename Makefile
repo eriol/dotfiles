@@ -38,3 +38,7 @@ install-fontconfig:
 	rm -rf ~/.config/fontconfig
 	ln -s `pwd`/config/fontconfig ~/.config/fontconfig
 	fc-cache -fr -v
+
+install-vdirsyncer:
+	rm -rf ~/.vdirsyncer
+	ln -s `pwd`/vdirsyncer ~/.vdirsyncer
