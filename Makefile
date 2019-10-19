@@ -33,3 +33,8 @@ install-msmtp:
 install-neomutt:
 	rm -f ~/.neomutt
 	ln -s `pwd`/neomutt ~/.neomutt
+
+install-fontconfig:
+	rm -rf ~/.config/fontconfig
+	ln -s `pwd`/config/fontconfig ~/.config/fontconfig
+	fc-cache -fr -v
