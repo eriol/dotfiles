@@ -8,5 +8,6 @@ set spoolfile = +Inbox
 set record = +Sent
 set postponed = +Drafts
 set trash = +Trash
+folder-hook Junk set sort=subject
 
 set sendmail = "/usr/bin/msmtp -a eriol@mornie.org"
