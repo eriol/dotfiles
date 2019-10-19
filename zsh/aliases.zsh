@@ -4,6 +4,7 @@ alias gi='gvim'
 alias h='history'
 alias i='vim'
 alias l='ls'
+alias mutt='neomutt'
 alias piken='noglob piken'
 alias wget='wget -c'
 
