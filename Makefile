@@ -46,3 +46,7 @@ install-vdirsyncer:
 install-khard:
 	rm -rf ~/.config/khard
 	ln -s `pwd`/config/khard ~/.config/khard
+
+install-reportbugrc:
+	rm -f ~/.reportbugrc
+	ln -s `pwd`/reportbugrc ~/.reportbugrc

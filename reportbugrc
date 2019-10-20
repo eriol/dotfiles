@@ -1,0 +1,7 @@
+bts debian
+editor vim
+mode expert
+
+no-cc
+header "X-Debbugs-CC: eriol@debian.org"
+mutt
