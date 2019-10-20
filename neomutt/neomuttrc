@@ -17,5 +17,7 @@ bind editor <Tab> complete-query
 bind editor CT complete
 
 set signature = ~/.neomutt/signature
+
 source ~/.neomutt/accounts/default
 source ~/.neomutt/sidebar
+source ~/.neomutt/dracula.muttrc
