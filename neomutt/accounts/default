@@ -10,4 +10,7 @@ set postponed = +Drafts
 set trash = +Trash
 folder-hook Junk set sort=subject
 
+send-hook '.*' 'set from=eriol@mornie.org'
+send-hook '~C "@(.*\.)?(debian)\."' 'set from=eriol@debian.org'
+
 set sendmail = "/usr/bin/msmtp -a eriol@mornie.org"
