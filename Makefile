@@ -50,3 +50,7 @@ install-khard:
 install-reportbugrc:
 	rm -f ~/.reportbugrc
 	ln -s `pwd`/reportbugrc ~/.reportbugrc
+
+install-gbp:
+	rm -f ~/.gbp.conf
+	ln -s `pwd`/gbp.conf ~/.gbp.conf
