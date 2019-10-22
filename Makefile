@@ -54,3 +54,7 @@ install-reportbugrc:
 install-gbp:
 	rm -f ~/.gbp.conf
 	ln -s `pwd`/gbp.conf ~/.gbp.conf
+
+install-dput:
+	rm -f ~/.dput.d
+	ln -s `pwd`/dput.d ~/.dput.d
