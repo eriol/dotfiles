@@ -1,15 +1,16 @@
 set mailcap_path = ~/.neomutt/mailcap
+
 auto_view text/html
 alternative_order text/plain text/html
 
+set edit_headers = yes
+set mark_old=no
 set send_charset = "utf-8"
 
 macro index,pager    \cb "<pipe-message> w3m -I "utf-8" -T text/html | urlscan<Enter>"
 macro attach,compose \cb "<pipe-entry>   w3m -I "utf-8" -T text/html | urlscan<Enter>"
 macro index,pager    \cu "<pipe-message> w3m -I "utf-8" -T text/html"
 macro attach,compose \cu "<pipe-message> w3m -I "utf-8" -T text/html"
-
-set edit_headers = yes
 
 folder-hook . set sort=threads
 set sort_aux=last-date-received
