@@ -17,6 +17,8 @@ fi
 [[ -f ~/.variables.zsh ]] && source ~/.variables.zsh
 [[ -f ~/.aliases.zsh ]] && source ~/.aliases.zsh
 
+unsetopt share_history
+
 typeset -U path
 # Prepend directories: last one will be the first.
 for dir in \
