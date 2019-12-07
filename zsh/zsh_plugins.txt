@@ -1,6 +1,7 @@
 robbyrussell/oh-my-zsh path:lib
 
 robbyrussell/oh-my-zsh path:plugins/django
+robbyrussell/oh-my-zsh path:plugins/emoji
 robbyrussell/oh-my-zsh path:plugins/golang
 robbyrussell/oh-my-zsh path:plugins/rust
 robbyrussell/oh-my-zsh path:plugins/virtualenv
