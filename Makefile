@@ -60,5 +60,5 @@ install-dput:
 	ln -s `pwd`/dput.d ~/.dput.d
 
 install-starship:
-	rm -f ~/config/starship.toml
+	rm -f ~/.config/starship.toml
 	ln -s `pwd`/starship/starship.toml ~/.config/starship.toml
