@@ -1,3 +1,4 @@
+alias bat=batcat
 alias df='df -h'
 alias free='free -m'
 alias gi='gvim'
