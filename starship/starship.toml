@@ -9,5 +9,7 @@ staged.style = "green"
 staged_count.enabled = true
 staged_count.style = "green"
 
-[line_break]
-disabled = true
+# Issue https://github.com/starship/starship/issues/290 seems to be
+# reproducible disabling line_break.
+# [line_break]
+# disabled = true
