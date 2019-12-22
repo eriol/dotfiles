@@ -1,6 +1,22 @@
 autoload colors && colors
 autoload -Uz compinit && compinit
 
+typeset -U path
+# Prepend directories: last one will be the first.
+for dir in \
+    /opt/aseprite \
+    /opt/kotlinc/bin \
+    $JAVA_HOME/bin \
+    ~/devel/go/bin \
+    ~/.cargo/bin \
+    ~/.local/bin \
+    ~/.bin \
+; do
+    if [[ -d $dir ]]; then path[1,0]=$dir; fi
+done
+
+eval "$(starship init zsh)"
+
 if command -v antibody >/dev/null 2>&1
 then
     # Fix for oh-my-zsh, see https://github.com/getantibody/antibody/issues/218
@@ -18,22 +34,6 @@ fi
 [[ -f ~/.aliases.zsh ]] && source ~/.aliases.zsh
 
 unsetopt share_history
-
-typeset -U path
-# Prepend directories: last one will be the first.
-for dir in \
-    /opt/aseprite \
-    /opt/kotlinc/bin \
-    $JAVA_HOME/bin \
-    ~/devel/go/bin \
-    ~/.cargo/bin \
-    ~/.local/bin \
-    ~/.bin \
-; do
-    if [[ -d $dir ]]; then path[1,0]=$dir; fi
-done
-
-eval "$(starship init zsh)"
 
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
