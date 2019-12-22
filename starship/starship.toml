@@ -5,8 +5,6 @@ truncation_length = 8
 style = "cyan"
 
 [git_status]
-# Disable style due to https://github.com/starship/starship/issues/290
-style = ""
 staged.style = "green"
 staged_count.enabled = true
 staged_count.style = "green"
