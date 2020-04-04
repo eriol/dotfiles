@@ -62,3 +62,7 @@ install-dput:
 install-starship:
 	rm -f ~/.config/starship.toml
 	ln -s `pwd`/starship/starship.toml ~/.config/starship.toml
+
+install-direnv:
+	rm -rf ~/.config/direnv
+	ln -s `pwd`/config/direnv ~/.config/direnv
