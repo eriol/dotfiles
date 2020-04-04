@@ -1,3 +1,6 @@
+# https://github.com/direnv/direnv/wiki/Python#venv-stdlib-module
+# Modified to source post_activate hock script if it exists.
+
 realpath() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
 }
@@ -24,4 +27,7 @@ layout_python-venv() {
 
     PATH="${VIRTUAL_ENV}/bin:${PATH}"
     export PATH
+
+    local post_activate=${VIRTUAL_ENV}/bin/post_activate
+    [[ -f ${post_activate} ]] && source ${post_activate}
 }
