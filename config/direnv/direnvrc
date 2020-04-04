@@ -1,5 +1,6 @@
 # https://github.com/direnv/direnv/wiki/Python#venv-stdlib-module
-# Modified to source post_activate hock script if it exists.
+# Modified to source post_activate hock script if it exists and to specify
+# an optional virtual_env_name.
 
 realpath() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
@@ -17,7 +18,9 @@ layout_python-venv() {
             log_error "Could not detect Python version"
             return 1
         fi
-        VIRTUAL_ENV=$PWD/.direnv/python-venv-$python_version
+
+        local virtual_env_name=${VIRTUAL_ENV_NAME:-python-venv-$python_version}
+        VIRTUAL_ENV=$PWD/.direnv/${virtual_env_name}
     fi
     export VIRTUAL_ENV
     if [[ ! -d $VIRTUAL_ENV ]]; then
