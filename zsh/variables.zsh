@@ -15,7 +15,7 @@ export DEBEMAIL DEBFULLNAME
 export GBP_CONF_FILES=~/.gbp.conf:debian/gbp.conf:~/gbp.late.conf
 
 # Go
-export GOPATH="$HOME/devel/go"
+export GOPATH="$HOME/.go"
 
 # Enable virtualenvwrapper
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh

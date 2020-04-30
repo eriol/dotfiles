@@ -9,7 +9,7 @@ for dir in \
     $JAVA_HOME/bin \
     /snap/bin \
     ~/.yarn/bin \
-    ~/devel/go/bin \
+    ~/.go/bin \
     ~/.cargo/bin \
     ~/.local/bin \
     ~/.bin \
