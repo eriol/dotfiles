@@ -34,6 +34,7 @@ fi
 
 [[ -f ~/.variables.zsh ]] && source ~/.variables.zsh
 [[ -f ~/.aliases.zsh ]] && source ~/.aliases.zsh
+[[ -f ~/.functions.zsh ]] && source ~/.functions.zsh
 
 unsetopt share_history
 
