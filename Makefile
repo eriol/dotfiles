@@ -1,8 +1,11 @@
 
 install-git:
+	rm -rf ~/.config/git
+	mkdir -p ~/.config/git/template
 	rm -f ~/.gitconfig ~/.gitignore
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
 	ln -s `pwd`/git/gitignore ~/.gitignore
+	cp `pwd`/git/config/git/template/HEAD ~/.config/git/template/HEAD
 
 install-kde:
 	rm -f ~/.local/share/konsole/Molokai.colorscheme
