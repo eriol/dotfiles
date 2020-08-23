@@ -62,7 +62,5 @@
 [push]
     default = simple
 
-[init]
-    templateDir = ~/.config/git/template/
 [pull]
 	rebase = false
