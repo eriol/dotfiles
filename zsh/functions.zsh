@@ -1,3 +1,8 @@
+gi ()
+{
+    alacritty -e vim "$@" &
+}
+
 cdgopath ()
 {
     cd $GOPATH
@@ -13,7 +18,6 @@ scptmp ()
 {
     scp -o "StrictHostKeyChecking no" -o "UserKnownHostsFile /dev/null" "$@"
 }
-
 
 # Recursively delete python related unwanted files
 nukepy ()
