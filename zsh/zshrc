@@ -42,3 +42,5 @@ unsetopt share_history
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 eval "$(direnv hook zsh)"
+
+eval $(ssh-agent) > /dev/null
