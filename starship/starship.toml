@@ -5,9 +5,7 @@ truncation_length = 8
 style = "cyan"
 
 [git_status]
-staged.style = "green"
-staged_count.enabled = true
-staged_count.style = "green"
+staged = '[++\($count\)](green)'
 
 [line_break]
 disabled = true
